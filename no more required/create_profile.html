@@ -1,0 +1,131 @@
+<head>
+<link rel="stylesheet" type="text/css" href="create_profile.css">
+</head>
+<div class="ph-line-nav nav">
+        <a href="index.html">Home</a>
+         <a href>About</a>
+         <a href>Help</a>
+         <a href="login.html">Login</a>
+        <br>
+        <br>
+       <div class="effect"></div>
+    </div>
+
+<form method="get" onsubmit="return false;">
+
+<br>
+<br>
+<div class="container1">
+<h1>Personal Info</h1>
+
+		<div>
+			<label for="username">Username<p class="help-inline">*</p></label>
+			<input id="username" type="text" name="username" pattern="[A-Za-z0-9_]{6,15}" required>
+			
+			<p class="help-block">(Alphabets, Numbers and Underscore allowed. min-length:6. max-length:15.)</p>
+		</div>
+	<br>	
+		<div>
+			<label for="first_name">First Name<p class="help-inline">*</p></label>
+			<input id="first_name" type="text" name="first_name" required>
+			
+		</div>
+		<br>
+		<div>
+			<label for="middle_name">Middle Name<p class="help-inline"></p></label>
+			<input id="middle_name" type="text" name="middle_name">
+			
+		</div>
+<br>
+                <div>
+			<label for="last_name">Last Name<p class="help-inline">*</p></label>
+			<input id="last_name" type="text" name="last_name" required>
+			
+		</div>
+	<br>	
+<div>
+			<label for="gender">Gender<p class="help-inline">*</p></label>
+			<input id="gender" type="radio" name="gender" value="male" required<label>  Male<label/>
+<br>
+			<input id="gender" type="radio" name="gender" value="male" required<label>  Female<label/>
+
+		</div>
+<br>
+
+		<div>
+			<label for="DOB">Date Of Birth
+                        <p class="help-inline">*</p></label>
+			<input id="DOB" type="date" name="DOB" required>
+		</div>
+		<br>
+		<div>
+			<label for="YOA">Year Of Admission<p class="help-inline">*</p></label>
+			<input id="YOA" type="number" name="YOA"  step="1" value="2013" required>
+			
+		</div>
+<br>
+<div>
+			<label for="YOG">Year Of Graduation<p class="help-inline">*</p></label>
+			<input id="YOG" type="number" name="YOG"  step="1" value="2013" required>
+			
+		</div>
+
+<br>
+		</div>
+	</div>
+<div class="container1">
+  <h1>Professional Details</h1>
+		
+		<div>
+			<label for="C_name">Oragnization Name<p class="help-inline">*</p></label>
+			<input id="c_name" type="text" name="c_name" required>
+		</div>
+	         <br>       		
+		<div>
+			<label for="Location">Location<p class="help-inline">*</p></label>
+			<input id="location" type="text" name="location" required>
+                        
+		</div>
+		<br>
+		<div>
+			<label for="experience">Experience<p class="help-inline"></p></label>
+			<input id="exp" type="number" name="exp" min="0" max="200" step="1" value="10">
+			
+		</div>
+<br>
+		</div>
+
+<div class="container1">
+  <h1>Contact Details</h1>
+		
+		<div>
+				
+		<div>
+			<label for="Email ID">Email ID<p class="help-inline">*</p></label>
+			<input id="email" type="text" name="email" required>
+					</div>
+	<br>	
+		<div>
+			<label for="Phone No.">Contact Number<p class="help-inline">*</p></label>
+			<input id="phone" type="text" name="phone" required>
+			
+		</div>	
+		<br>		<div>
+			<label for="address">Address<span class="help-inline">*</span></label>
+<div class="content-editable" contenteditable required></div>	
+			
+		</div>
+
+<br>
+		</div>
+	</div>
+	</div>
+<div class="container2" class="footer">
+<div class="footer">
+<input type="submit" name="submit" value="Submit" class="submit" />
+<input type="button" name="cancel" value="Cancel" class="submit1" />
+</div>
+</div>
+<br>
+	</form>
+		

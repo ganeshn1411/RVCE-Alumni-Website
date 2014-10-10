@@ -1,0 +1,27 @@
+create database alumni;
+
+create table admin_login(Username Varchar(30), Password Varchar(30));
+
+create table member(USN VARCHAR(20) primary key, Username Varchar(30), Password Varchar(30),m_name VARCHAR(30),l_name VARCHAR(30),
+f_name VARCHAR(30),Gender CHAR(10), DOB date,YOA integer,YOG integer, Org_Name Varchar(30),Location varchar(20), 
+Experience integer, Ph_No Varchar(20), Email_ID Varchar(30),Address Varchar(50)); 
+
+create table activity(Activity_no Varchar(20) primary key Auto_Increment,A_Name Varchar(30),Date date,Type Varchar(20),
+Location Varchar(50), Start_time datetime,End_time datetime, Purpose Varchar(30), Agenda Varchar(30), count integer, 
+maximum integer);
+
+create table participates(USN VARCHAR(20) references member(USN), Activity_no Varchar(20) 
+references activity(Activity_no), primary key(USN,Activity_no)); 
+
+create table acheivments(USN VARCHAR(20) references member(USN),qualification Varchar(30),Acad_Acheivment Varchar(30),
+Award Varchar(30), Social_recog Varchar(30), primary key(USN,Acad_Acheivment,qualification,Award,Social_recog));
+
+create table visit(USN VARCHAR(20) references member(USN),date date, purpose Varchar(30),primary key(USN,date));
+
+create table seminars(USN VARCHAR(20) references member(USN),date date, Type Varchar(20), purpose Varchar(30),
+Topic Varchar(30), Target_audience Varchar(30),primary key(USN,date));
+
+create table funds(USN VARCHAR(20) references member(USN),date date,purpose Varchar(30),amount integer, 
+primary key(USN,date));
+
+create table feedback(USN VARCHAR(30) references member(USN),context Varchar(50),Feedback Varchar(100));
